@@ -7,6 +7,10 @@ var winner = undefined;
 
 function winnerIs() { return localStorage.getItem("winner"); }
 
+function reset(){
+    
+}
+
 function decideWinner(move1, move2, energy1, energy2) {
     if (move1 == 'charge' && move2 == 'attack' && energy2 > 0) return -1
     if (move1 == 'attack' && energy1 == 0 && move2 == 'attack' && energy2 > 0) return -1
