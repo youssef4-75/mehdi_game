@@ -22,8 +22,7 @@ function endTurn() {
     if (winner === undefined) turn++;
     else {
         localStorage.setItem("winner", winner)
-        alert("here");
-        window.location.href = 'ended.html';
+        setTimeout(window.location.href = 'ended.html', 1000)
     }
 }
 
@@ -45,7 +44,7 @@ function playerMove(action) {
     console.log(winner);
     playerEnergy = energy1;
 
-    endTurn();
+    setTimeout(endTurn(), 300)
 
 }
 
